@@ -9,9 +9,11 @@ import {
 } from "@remix-run/react";
 
 import stylesheet from "~/styles/app.css";
+import font from "~/styles/custom-font.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  { rel: "stylesheet", href: font },
 ];
 
 export const meta: MetaFunction = () => ({
@@ -27,7 +29,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-accent">
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

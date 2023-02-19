@@ -18,6 +18,22 @@ module.exports = {
       dark: withOpacityValue("--color-dark"),
       accent: withOpacityValue("--color-accent"),
     },
+    fontFamily: {
+      //Setup custom fonts..
+      // akira: "Akira, sans-serif",
+      // acumin: "acumin-pro, sans-serif",
+      // "acumin-extra-condensed": "acumin-pro-extra-condensed, sans-serif",
+      //Can also just set a default font on the sans like so..
+      sans: [
+        [
+          "Satoshi-Variable",
+          "Helvetica Neue",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+      ],
+    },
   },
   plugins: [],
 };
