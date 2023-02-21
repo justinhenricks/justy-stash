@@ -9,6 +9,27 @@
 }
 
 @layer base {
+  /* Hamburger menu animation */
+  .hamburger-icon,
+  .hamburger-icon path {
+    transition: transform 200ms ease, stroke-width 100ms ease;
+  }
+  .hamburger-icon.close {
+    transform: rotate(90deg);
+  }
+  .hamburger-icon.close path:first-of-type {
+    transform: rotate(45deg) translate(20%, -20%);
+  }
+  .hamburger-icon.close path:nth-of-type(2) {
+    stroke-width: 0px !important;
+  }
+  .hamburger-icon.close path:last-of-type {
+    transform: rotate(-45deg) translate(-50%, -10%);
+  }
+
+  .nav-open {
+    overflow: hidden;
+  }
 }
 
 @layer components {
