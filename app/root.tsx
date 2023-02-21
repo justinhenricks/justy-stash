@@ -19,26 +19,26 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => {
-  const title = "Cave Club";
-  const description = `hi friend! wanna join the club?`;
+  const title = "Stash";
+  const description = `hi friend! this my stash?`;
   return {
     charset: "utf-8",
     title,
     description,
     viewport: "width=device-width,initial-scale=1",
-    keywords: "Cave Club, Cave Town",
-    "twitter:image": "https://cave-club-remix.pages.dev/caveclubsoc.jpg",
-    "twitter:url": "https://cave-club-remix.pages.dev",
-    "twitter:card": "summary_large_image",
-    "twitter:creator": "@remix_run",
-    "twitter:site": "@remix_run",
-    "twitter:title": "Cave Club",
-    "twitter:description": description,
-    "og:type": "website",
-    "og:url": "https://cave-club-remix.pages.dev",
-    "og:title": title,
-    "og:description": description,
-    "og:image": "https://cave-club-remix.pages.dev/caveclubsoc.jpg",
+    // keywords: "Cave Club, Cave Town",
+    // "twitter:image": "https://cave-club-remix.pages.dev/caveclubsoc.jpg",
+    // "twitter:url": "https://cave-club-remix.pages.dev",
+    // "twitter:card": "summary_large_image",
+    // "twitter:creator": "@remix_run",
+    // "twitter:site": "@remix_run",
+    // "twitter:title": "Cave Club",
+    // "twitter:description": description,
+    // "og:type": "website",
+    // "og:url": "https://cave-club-remix.pages.dev",
+    // "og:title": title,
+    // "og:description": description,
+    // "og:image": "https://cave-club-remix.pages.dev/caveclubsoc.jpg",
   };
 };
 

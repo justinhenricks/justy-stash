@@ -22,7 +22,11 @@ module.exports = {
         "2xl": "6rem",
       },
     },
-    extend: {},
+    extend: {
+      spacing: {
+        header: "var(--height-mobile-header)",
+      },
+    },
     colors: {
       light: withOpacityValue("--color-light"),
       dark: withOpacityValue("--color-dark"),

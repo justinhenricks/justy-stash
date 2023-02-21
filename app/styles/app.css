@@ -6,6 +6,7 @@
   --color-light: 255 255 255;
   --color-dark: 0 0 0;
   --color-accent: 249 247 192;
+  --height-mobile-header: 60px;
 }
 
 @layer base {

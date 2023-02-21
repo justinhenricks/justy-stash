@@ -1,27 +1,19 @@
 import { Link } from "@remix-run/react";
 import { startTransition } from "react";
 
-import { Drawer } from "./Drawer";
+import { Drawer } from "~/components";
 
 export function MenuDrawer({
   isOpen,
   onClose,
   menu,
-  closeButtonRef,
 }: {
   isOpen: boolean;
   onClose: () => void;
   menu: Menu;
-  closeButtonRef: React.RefObject<HTMLButtonElement>;
 }) {
   return (
-    <Drawer
-      closeButtonRef={closeButtonRef}
-      open={isOpen}
-      onClose={onClose}
-      openFrom="left"
-      heading="Links"
-    >
+    <Drawer open={isOpen} onClose={onClose} openFrom="left">
       <MenuMobileNav menu={menu} onClose={onClose} />
     </Drawer>
   );
@@ -29,7 +21,7 @@ export function MenuDrawer({
 
 function MenuMobileNav({ menu, onClose }: { menu: Menu; onClose: () => void }) {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-4">
+    <div className="flex w-full flex-col items-center h-full justify-center gap-4">
       <nav className="flex w-full flex-col items-center justify-center gap-5 p-6 text-4xl font-bold sm:gap-6 sm:px-12 sm:py-8">
         {/* Top level menu items */}
         {(menu?.items || []).map((item) =>

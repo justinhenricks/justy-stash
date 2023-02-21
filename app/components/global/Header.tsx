@@ -1,21 +1,14 @@
 import { Link } from "@remix-run/react";
-import React, { useRef } from "react";
+import React from "react";
 import logo from "~/assets/img/logo_white.png";
 
-import {
-  IconAccount,
-  IconMenu,
-  IconMoon,
-  MenuDrawer,
-  useDrawer,
-} from "~/components";
+import { IconAccount, IconMenu, IconMoon, MenuDrawer } from "~/components";
+import { useDrawer } from "~/hooks";
 interface HeaderProps {
   menu: Menu;
 }
 
 export const Header: React.FC<HeaderProps> = ({ menu }) => {
-  const menuToggleRef = useRef<HTMLButtonElement>(null);
-
   const {
     isOpen: isMenuOpen,
     openDrawer: openMenu,
@@ -26,11 +19,11 @@ export const Header: React.FC<HeaderProps> = ({ menu }) => {
     <>
       <header
         role="banner"
-        className={`bg-dark text-light h-16 sticky z-40 top-0 w-full transition shadow-lg`}
+        className={`bg-dark text-light h-header sticky z-40 top-0 w-full transition shadow-lg`}
       >
+        <MenuDrawer isOpen={isMenuOpen} onClose={closeMenu} menu={menu} />
         <div className="container h-full flex justify-between items-center">
           <button
-            ref={menuToggleRef}
             className="mobile-hamburger lg:hidden"
             onClick={isMenuOpen ? closeMenu : openMenu}
           >
@@ -42,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ menu }) => {
 
           <h1 className="max-w-[150px] lg:hidden">
             <Link to={"/"}>
-              <img className="h-10" src={logo} alt="logo" />
+              <img className="h-10" src={logo} alt="SITE NAME" />
             </Link>
           </h1>
 
@@ -85,12 +78,6 @@ export const Header: React.FC<HeaderProps> = ({ menu }) => {
           </div>
         </div>
       </header>
-      <MenuDrawer
-        closeButtonRef={menuToggleRef}
-        isOpen={isMenuOpen}
-        onClose={closeMenu}
-        menu={menu}
-      />
     </>
   );
 };
